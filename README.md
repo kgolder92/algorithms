@@ -1,2 +1,2 @@
-# algorithms
-data structure /algorithms
+# Algorithms
+Personal repository for algorithm and toy problems
