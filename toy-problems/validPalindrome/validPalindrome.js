@@ -27,7 +27,7 @@ const isPalindrome = (s) => {
 
   const result = filteredStr.split('').reverse().join('');
 
-  return filteredStr.toLowerCase() === result.toLowerCase() ? true : false;
+  return filteredStr.toLowerCase() === result.toLowerCase();
 };
 
 console.log(isPalindrome('0p,p0'));
