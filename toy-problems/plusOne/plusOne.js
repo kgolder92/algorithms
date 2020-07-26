@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * @param {number[]} digits
  * @return {number[]}

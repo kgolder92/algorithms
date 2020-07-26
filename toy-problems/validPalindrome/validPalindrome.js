@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Given a string determine if it is a valid palindrome, considering only alphanumeric characters
  *
