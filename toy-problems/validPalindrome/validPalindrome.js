@@ -18,7 +18,6 @@ const isPalindrome = (s) => {
   if (s.length <= 0) return true;
 
   let filteredStr = '';
-
   for (let i = 0; i < s.length; i += 1) {
     const curr = s[i];
     if (curr.match(/^[A-Za-z0-9]+$/)) {
@@ -26,9 +25,14 @@ const isPalindrome = (s) => {
     }
   }
 
-  const result = filteredStr.split('').reverse().join('');
+  let reversedStr = '';
+  for (let i = filteredStr.length - 1; i >= 0; i -= 1) {
+    reversedStr += filteredStr[i];
+  }
 
-  return filteredStr.toLowerCase() === result.toLowerCase();
+  if (reversedStr.toLowerCase() === filteredStr.toLowerCase()) return true
+
+  return false;
 };
 
 console.log(isPalindrome('0p,p0'));

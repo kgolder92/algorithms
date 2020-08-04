@@ -20,6 +20,20 @@
  * @param {character[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  */
-const reverseString = (s) => s.reverse();
+const reverseString = (s) => {
+  const arr = s;
+  let startPtr = 0;
+  let lastPtr = arr.length - 1;
+
+  while (startPtr <= lastPtr) {
+    const tmp = s[lastPtr];
+    arr[lastPtr] = s[startPtr];
+    arr[startPtr] = tmp;
+
+    startPtr += 1;
+    lastPtr -= 1;
+  }
+  return s;
+};
 
 console.log(reverseString(['h', 'e', 'l', 'l', 'o']));
