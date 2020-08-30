@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -9,7 +10,8 @@ const twoSum = (nums, target) => {
     const current = nums[i];
     const difference = target - current;
     const matchIndex = pastNumbers[difference];
-    if (matchIndex !== undefined) {
+
+    if (matchIndex) {
       return [matchIndex, i];
     }
     pastNumbers[current] = i;
