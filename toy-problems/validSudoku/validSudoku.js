@@ -33,6 +33,7 @@
  * 4. return "VALID"
  */
 
+// O(n^2)
 const hasDuplicates = (matrix, row, col) => {
   const setCols = new Set(col);
   const setRows = new Set(row);

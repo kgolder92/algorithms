@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
