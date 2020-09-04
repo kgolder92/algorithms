@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /*
 two a dimensial grid map
 each element is going to represent a peice of land
