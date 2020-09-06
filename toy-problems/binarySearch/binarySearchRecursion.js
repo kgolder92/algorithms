@@ -7,34 +7,38 @@ I: Array, Number - target
 O: Boolean
 
 Plan:
-create two pointers - R and L
-calculate middle pointer
-compare middle and target
-if target > middle
-  move left pointer to index middle + 1
-if target < middle
-  move right pointer to index middle - 1
-if target = middle
-  return true
-if right pointer is less than left ptr or left ptr > right ptr
-  return false
+create inner function
+takes in two pointers - R and L
+  if L > R return -1
 
+calculate middle pointer
+if target = middle
+  return middle
+
+if target > middle
+  L = middle + 1
+  call inner function and pass in L and then R
+if target < middle
+  R = middle - 1
+  call inner function and pass in L and then R
+
+Time | Space complexity:
+  O(log(n)) time | O(log(n)) space
 */
 const binarySearch = (array, target) => {
   const findTarget = (left, right) => {
-    if (left > right || right < left) {
+    if (left > right) {
       return -1;
     }
 
     const middle = Math.floor((right + left) / 2);
 
-    if (array[middle] === target) {
-      return middle;
-    }
+    if (array[middle] === target) return middle;
+
     if (target < array[middle]) {
-      return findTarget(left, middle - 1);
+      return findTarget(left, middle - 1); // call findTarget on left array
     }
-    return findTarget(middle + 1, right);
+    return findTarget(middle + 1, right); // call findTarget on right array
   };
   return findTarget(0, array.length - 1);
 };
