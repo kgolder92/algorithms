@@ -26,6 +26,6 @@
     "eslint-plugin-react-hooks": "^2.5.1"
   },
   "dependencies": {
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.20"
   }
 }
